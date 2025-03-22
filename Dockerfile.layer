@@ -1,0 +1,10 @@
+FROM buildregistry.localdomain/openmicroscopy/apacheds:latest
+
+ENV APACHEDS_BOOTSTRAP /bootstrap
+
+ADD instance/* ${APACHEDS_BOOTSTRAP}/conf/
+RUN sed -i "s/ads-contextentry:: [A-Za-z0-9\+\=\/]*/ads-contextentry:: $(base64 -w 0 $APACHEDS_BOOTSTRAP/conf/ads-contextentry.decoded)/g" /$APACHEDS_BOOTSTRAP/conf/config.ldif
+ADD ome.ldif ${APACHEDS_BOOTSTRAP}/
+
+ENTRYPOINT ["/run.sh"]
+

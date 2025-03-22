@@ -1,23 +1,23 @@
 version: 1
 
-dn: dc=org
+dn: dc=io
 objectClass: extensibleObject
 objectClass: domain
 objectClass: top
-dc: org
+dc: io
 
-dn: dc=openmicroscopy,dc=org
+dn: dc=labber,dc=io
 objectClass: extensibleObject
 objectClass: domain
 objectClass: top
-dc: openmicroscopy
+dc: labber
 
-dn: ou=Users,dc=openmicroscopy,dc=org
+dn: ou=Users,dc=labber,dc=io
 objectClass: organizationalUnit
 objectClass: top
 ou: Users
 
-dn: ou=Groups,dc=openmicroscopy,dc=org
+dn: ou=Groups,dc=labber,dc=io
 objectClass: organizationalUnit
 objectClass: top
 ou: Groups

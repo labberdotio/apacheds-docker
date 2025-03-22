@@ -1,4 +1,4 @@
-dn: dc=openmicroscopy,dc=org
-dc: openmicroscopy
+dn: dc=labber,dc=io
+dc: labber
 objectclass: domain
 objectclass: top
